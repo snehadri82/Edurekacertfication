@@ -12,6 +12,6 @@
   - name: get the dockerfile from githib
     git: repo=https://github.com/snehadri82/Edurekacertfication.git dest=/tmp/newgitrepo
   - name: build dockerfile
-    command: chdir=/tmp/gitrepo docker build -t deployimage:ansible .
+    command: chdir=/tmp/newgitrepo docker build -t deployimage:ansible .
   - name: run the dockerfile
-    command: chdir=/tmp/gitrepo docker run -itd -P deployimage:ansible
+    command: chdir=/tmp/newgitrepo docker run -itd -P deployimage:ansible
